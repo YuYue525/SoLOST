@@ -10,7 +10,7 @@ from tqdm import tqdm
 transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))])
 
 class Dataset:
-    def __init__(self, dataset_name, set, remove_hards=False):
+    def __init__(self, dataset_name, set, remove_hards):
 
         self.dataset_name = dataset_name
         self.set = set
@@ -33,49 +33,46 @@ class Dataset:
         elif self.dataset_name == "COCO2k":
             self.year = "2014"
             self.root_path = f"datasets/COCO/images/{self.set}{self.year}"
-
             self.sel20k = 'datasets/coco_20k_filenames.txt'
             self.all_annfile = "datasets/COCO/annotations/instances_train2014.json"
-
             self.annfile = "datasets/instances_train2014_sel20k.json"
-
             if not os.path.exists(self.annfile):
                 select_20k_for_coco(self.sel20k, self.all_annfile)
 
+            self.dataloader = torchvision.datasets.CocoDetection(self.root_path, annFile=self.annfile, transform=transform)
+
         else:
             raise ValueError("Unknown dataset.")
-        '''
-        if remove_hards:
-            self.name += f"-nohards"
+
+        if self.remove_hards:
+            self.name += "-nohards"
             self.hards = self.get_hards()
             print("Discarded", len(self.hards), "images containing only objects annotated as 'hard'.")
-        '''
 
     def load_one_image(self, img_name):
-
         if "VOC" in self.dataset_name:
             image = skimage.io.imread(f"./datasets/VOC{self.year}/VOCdevkit/VOC{self.year}/JPEGImages/{img_name}")
+        elif "COCO" in self.dataset_name:
+            image = skimage.io.imread(f"./datasets/COCO/images/{self.set}{self.year}/{img_name}")
         else:
             raise ValueError("Unkown dataset.")
-
         return image
 
     def get_image_name(self, inp):
-
         if "VOC" in self.dataset_name:
             img_name = inp["annotation"]["filename"]
 
         return img_name
 
-def select_20k_for_coco(sel_file, all_annFile):
+def select_20k_for_coco(sel_file, all_annfile):
 
     new_gts = []
     new_imgs = []
     selected_results = {}
 
-    print('Building COCO 20k dataset.')
+    print('Building COCO20k dataset.')
 
-    with open(all_annFile, "r") as f:
+    with open(all_annfile, "r") as f:
         all_info = json.load(f)
 
     with open(sel_file, "r") as f:
@@ -84,8 +81,8 @@ def select_20k_for_coco(sel_file, all_annFile):
     selected_img_numbers = [int(x.split("_")[-1].split(".")[0]) for x in img_paths]
 
     for selected_img_number in tqdm(selected_img_numbers):
-        new_imgs.extend([x for x in all_info["images"] if x["id"] == selected_img_number])
-        new_gts.extend([x for x in all_info["annotations"] if x["image_id"] == selected_img_number])
+        new_imgs.extend([x for x in all_info["images"] if int(x["id"]) == selected_img_number])
+        new_gts.extend([x for x in all_info["annotations"] if int(x["image_id"]) == selected_img_number])
 
     selected_results["images"] = new_imgs
     selected_results["annotations"] = new_gts

@@ -15,7 +15,6 @@ class vgg16Bottom(nn.Module):
         x = self.features(x)
         return x
 
-
 class ResNet50Bottom(nn.Module):
 
     def __init__(self, original_model):
@@ -25,7 +24,6 @@ class ResNet50Bottom(nn.Module):
     def forward(self, x):
         x = self.features(x)
         return x
-
 
 def create_model(arch, patch_size, resnet_dilate, device):
     pretrained_flag = True if "imagenet" in arch else False

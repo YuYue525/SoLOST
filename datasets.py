@@ -60,9 +60,11 @@ class Dataset:
 
     def get_image_name(self, inp):
         if "VOC" in self.dataset_name:
-            img_name = inp["annotation"]["filename"]
-
-        return img_name
+            return inp["annotation"]["filename"]
+        elif "COCO" in self.dataset_name:
+            return str(inp[0]["image_id"])
+        else:
+            raise ValueError("Unkown dataset.")
 
 def select_20k_for_coco(sel_file, all_annfile):
 

@@ -75,11 +75,9 @@ def select_20k_for_coco(sel_file, all_annFile):
 
     print('Building COCO 20k dataset.')
 
-    # all the annotations
     with open(all_annFile, "r") as f:
         all_info = json.load(f)
 
-    # selected images' names
     with open(sel_file, "r") as f:
         lines = f.readlines()
         img_paths = [x.replace("\n", "") for x in lines]

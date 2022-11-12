@@ -43,11 +43,12 @@ class Dataset:
 
         else:
             raise ValueError("Unknown dataset.")
-
+        '''
         if self.remove_hards:
             self.name += "-nohards"
             self.hards = self.get_hards()
             print("Discarded", len(self.hards), "images containing only objects annotated as 'hard'.")
+        '''
 
     def load_one_image(self, img_name):
         if "VOC" in self.dataset_name:

@@ -5,6 +5,7 @@ import torchvision
 import skimage.io
 
 from torchvision import transforms
+from tqdm import tqdm
 
 transform = transforms.Compose([transforms.ToTensor(), transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))])
 
@@ -67,35 +68,33 @@ class Dataset:
         return img_name
 
 def select_20k_for_coco(sel_file, all_annFile):
+
+    new_gts = []
+    new_imgs = []
+    selected_results = {}
+
     print('Building COCO 20k dataset.')
 
     # all the annotations
     with open(all_annFile, "r") as f:
-        train2014 = json.load(f)
+        all_info = json.load(f)
 
-    # selected images
+    # selected images' names
     with open(sel_file, "r") as f:
-        sel_20k = f.readlines()
-        sel_20k = [s.replace("\n", "") for s in sel_20k]
+        lines = f.readlines()
+        img_paths = [x.replace("\n", "") for x in lines]
+    selected_img_numbers = [int(x.split("_")[-1].split(".")[0]) for x in img_paths]
 
-    im20k = [str(int(s.split("_")[-1].split(".")[0])) for s in sel_20k]
+    for selected_img_number in tqdm(selected_img_numbers):
+        new_imgs.extend([x for x in all_info["images"] if x["id"] == selected_img_number])
+        new_gts.extend([x for x in all_info["annotations"] if x["image_id"] == selected_img_number])
 
-    new_anno = []
-    new_images = []
+    selected_results["images"] = new_imgs
+    selected_results["annotations"] = new_gts
+    selected_results["categories"] = all_info["categories"]
 
-    for i in tqdm(im20k):
-        new_anno.extend(
-            [a for a in train2014["annotations"] if a["image_id"] == int(i)]
-        )
-        new_images.extend([a for a in train2014["images"] if a["id"] == int(i)])
-
-    train2014_20k = {}
-    train2014_20k["images"] = new_images
-    train2014_20k["annotations"] = new_anno
-    train2014_20k["categories"] = train2014["categories"]
-
-    with open("datasets/instances_train2014_sel20k.json", "w") as outfile:
-        json.dump(train2014_20k, outfile)
+    with open("datasets/instances_train2014_sel20k.json", "w") as f:
+        json.dump(selected_results, f)
 
     print('Done.')
 

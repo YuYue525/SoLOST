@@ -11,7 +11,7 @@ pip install -r requirements.txt
 This method is based on DINO [paper](https://arxiv.org/pdf/2104.14294.pdf). The framework can be installed using the following commands:
 ```
 git clone https://github.com/facebookresearch/dino.git
-cd dino
+cd dino; 
 touch __init__.py
 echo -e "import sys\nfrom os.path import dirname, join\nsys.path.insert(0, join(dirname(__file__), '.'))" >> __init__.py; cd ../;
 ```
@@ -31,14 +31,14 @@ python main_lost.py --image_path examples/VOC07_000236.jpg --visualize seed_expa
 Following are the different steps to reproduce the results of **LOST** presented in the paper. 
 
 ### PASCAL-VOC
-Please download the PASCAL VOC07 and PASCAL VOC12 datasets ([link](https://entuedu-my.sharepoint.com/:f:/g/personal/yyu025_e_ntu_edu_sg/EpaGUyBebVlMo0euLfFdaRwB8leRBxTtc10CHEoq94UGJg?e=XkbXxB)) and put the data in the folder `datasets`. There should be the two subfolders: `datasets/VOC2007` and `datasets/VOC2012`. In order to apply lost and compute corloc results (VOC07 61.9, VOC12 64.0), please launch:
+Please download the PASCAL VOC07 and PASCAL VOC12 datasets ([link](http://host.robots.ox.ac.uk/pascal/VOC/)) and put the data in the folder `datasets`. There should be the two subfolders: `datasets/VOC2007` and `datasets/VOC2012`. In order to apply lost and compute corloc results (VOC07 61.9, VOC12 64.0), please launch:
 ```
-python main.py --dataset VOC07 --set trainval
-python main.py --dataset VOC12 --set trainval
+python main_lost.py --dataset VOC07 --set trainval
+python main_lost.py --dataset VOC12 --set trainval
 ```
 
 ### COCO
-Please download the [COCO dataset]([https://cocodataset.org/#home](https://entuedu-my.sharepoint.com/:f:/g/personal/yyu025_e_ntu_edu_sg/EpaGUyBebVlMo0euLfFdaRwB8leRBxTtc10CHEoq94UGJg?e=XkbXxB)) and put the data in  `datasets`. Results are provided given the 2014 annotations following previous works. The following command line allows you to get results on the subset of 20k images of the COCO dataset (corloc 50.7), following previous litterature. To be noted that the 20k images are a subset of the `train` set.
+Please download the [COCO dataset](https://cocodataset.org/#home) and put the data in  `datasets/COCO`. Results are provided given the 2014 annotations following previous works. The following command line allows you to get results on the subset of 20k images of the COCO dataset (corloc 50.7), following previous litterature. To be noted that the 20k images are a subset of the `train` set.
 ```
-python main.py --dataset COCO20k --set train
+python main_lost.py --dataset COCO20k --set train
 ```

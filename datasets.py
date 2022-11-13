@@ -1,3 +1,6 @@
+# Copyright 2021 - Valeo Comfort and Driving Assistance - Oriane Siméoni @ valeo.ai
+# rewrite by YU Yue, Nanyang Technological University
+
 import os
 import math
 import torch

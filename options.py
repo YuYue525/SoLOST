@@ -1,5 +1,7 @@
-import argparse
+# Copyright 2021 - Valeo Comfort and Driving Assistance - Oriane Siméoni @ valeo.ai
+# rewrite by YU Yue, Nanyang Technological University
 
+import argparse
 
 def init_parser():
     parser = argparse.ArgumentParser("Unsupervised object discovery with LOST.")

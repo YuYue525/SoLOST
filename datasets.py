@@ -71,8 +71,8 @@ def extract_gt_for_VOC(targets, remove_hards=False):
 
         gt_cls_list.append(objects[obj]["name"])
 
-        x1y1x2y2 = [int(objects[obj]["bndbox"]["xmin"] - 1),
-            int(objects[obj]["bndbox"]["ymin"] - 1),
+        x1y1x2y2 = [int(objects[obj]["bndbox"]["xmin"]) - 1,
+            int(objects[obj]["bndbox"]["ymin"]) - 1,
             int(objects[obj]["bndbox"]["xmax"]),
             int(objects[obj]["bndbox"]["ymax"])]
 

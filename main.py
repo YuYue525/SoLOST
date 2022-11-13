@@ -13,131 +13,33 @@ import numpy as np
 from tqdm import tqdm
 from PIL import Image
 
+from options import init_parser
 from models import create_model
 from datasets import ImageDataset, Dataset, bbox_iou
 from visualizations import visualize_fms, visualize_predictions, visualize_seed_expansion
 from object_discovery import lost, detect_box, dino_seg
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser("Unsupervised object discovery with LOST.")
-    parser.add_argument(
-        "--arch",
-        default="vit_small",
-        type=str,
-        choices=[
-            "vit_tiny",
-            "vit_small",
-            "vit_base",
-            "resnet50",
-            "vgg16_imagenet",
-            "resnet50_imagenet",
-        ],
-        help="Model architecture.",
-    )
-    parser.add_argument(
-        "--patch_size", default=16, type=int, help="Patch resolution of the model."
-    )
 
-    # Use a dataset
-    parser.add_argument(
-        "--dataset",
-        default="VOC07",
-        type=str,
-        choices=[None, "VOC07", "VOC12", "COCO20k"],
-        help="Dataset name.",
-    )
-    parser.add_argument(
-        "--set",
-        default="train",
-        type=str,
-        choices=["val", "train", "trainval", "test"],
-        help="Path of the image to load.",
-    )
-    # Or use a single image
-    parser.add_argument(
-        "--image_path",
-        type=str,
-        default=None,
-        help="If want to apply only on one image, give file path.",
-    )
-
-    # Folder used to output visualizations and
-    parser.add_argument(
-        "--output_dir", type=str, default="outputs", help="Output directory to store predictions and visualizations."
-    )
-
-    # Evaluation setup
-    parser.add_argument("--no_hard", action="store_true",
-                        help="Only used in the case of the VOC_all setup (see the paper).")
-    parser.add_argument("--no_evaluation", action="store_true", help="Compute the evaluation.")
-    parser.add_argument("--save_predictions", default=True, type=bool, help="Save predicted bouding boxes.")
-
-    # Visualization
-    parser.add_argument(
-        "--visualize",
-        type=str,
-        choices=["fms", "seed_expansion", "pred", None],
-        default=None,
-        help="Select the different type of visualizations.",
-    )
-
-    # For ResNet dilation
-    parser.add_argument("--resnet_dilate", type=int, default=2, help="Dilation level of the resnet model.")
-
-    # LOST parameters
-    parser.add_argument(
-        "--which_features",
-        type=str,
-        default="k",
-        choices=["k", "q", "v"],
-        help="Which features to use",
-    )
-    parser.add_argument(
-        "--k_patches",
-        type=int,
-        default=100,
-        help="Number of patches with the lowest degree considered."
-    )
-
-    # Use dino-seg proposed method
-    parser.add_argument("--dinoseg", action="store_true", help="Apply DINO-seg baseline.")
-    parser.add_argument("--dinoseg_head", type=int, default=4)
-
+    parser = init_parser()
     args = parser.parse_args()
 
     if args.image_path is not None:
         args.save_predictions = False
         args.no_evaluation = True
         args.dataset = None
-
-    # -------------------------------------------------------------------------------------------------------
-    # Dataset
-
-    # If an image_path is given, apply the method only to the image
-    if args.image_path is not None:
         dataset = ImageDataset(args.image_path)
+        args.output_dir = os.path.join(args.output_dir, dataset.name)
     else:
         dataset = Dataset(args.dataset, args.set, args.no_hard)
 
-    # -------------------------------------------------------------------------------------------------------
-    # Model
-    device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
-    model = create_model(args.arch, args.patch_size, args.resnet_dilate, device)
-
-    # -------------------------------------------------------------------------------------------------------
-    # Directories
-    if args.image_path is None:
-        args.output_dir = os.path.join(args.output_dir, dataset.name)
     os.makedirs(args.output_dir, exist_ok=True)
 
-    # Naming
     if args.dinoseg:
-        # Experiment with the baseline DINO-seg
         if "vit" not in args.arch:
             raise ValueError("DINO-seg can only be applied to tranformer networks.")
         exp_name = f"{args.arch}-{args.patch_size}_dinoseg-head{args.dinoseg_head}"
     else:
-        # Experiment with LOST
         exp_name = f"LOST-{args.arch}"
         if "resnet" in args.arch:
             exp_name += f"dilate{args.resnet_dilate}"
@@ -146,13 +48,13 @@ if __name__ == "__main__":
 
     print(f"Running LOST on the dataset {dataset.name} (exp: {exp_name})")
 
-    # Visualization
     if args.visualize:
         vis_folder = f"{args.output_dir}/visualizations/{exp_name}"
         os.makedirs(vis_folder, exist_ok=True)
 
-    # -------------------------------------------------------------------------------------------------------
-    # Loop over images
+    device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
+    model = create_model(args.arch, args.patch_size, args.resnet_dilate, device)
+
     preds_dict = {}
     cnt = 0
     corloc = np.zeros(len(dataset.dataloader))

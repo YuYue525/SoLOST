@@ -24,7 +24,7 @@ import numpy as np
 from tqdm import tqdm
 from PIL import Image
 
-from networks import create_model
+from models import create_model
 from datasets import ImageDataset, Dataset, bbox_iou
 from visualizations import visualize_fms, visualize_predictions, visualize_seed_expansion
 from object_discovery import lost, detect_box, dino_seg

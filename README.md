@@ -1,3 +1,22 @@
+# LOST 
+Pytorch implementation of the unsupervised object discovery method **LOST**. More details can be found in the paper:
+
+**Localizing Objects with Self-Supervised Transformers and no Labels**, BMVC 2021 [[arXiv](https://arxiv.org/abs/2109.14279)]  
+by *Oriane Siméoni, Gilles Puy, Huy V. Vo, Simon Roburin, Spyros Gidaris, Andrei Bursuc, Patrick Pérez, Renaud Marlet and Jean Ponce*
+
+We refer to the work from the following citation:
+
+
+```
+@inproceedings{LOST,
+   title = {Localizing Objects with Self-Supervised Transformers and no Labels},
+   author = {Oriane Sim\'eoni and Gilles Puy and Huy V. Vo and Simon Roburin and Spyros Gidaris and Andrei Bursuc and Patrick P\'erez and Renaud Marlet and Jean Ponce},
+   journal = {Proceedings of the British Machine Vision Conference (BMVC)},
+   month = {November},
+   year = {2021}
+}
+```
+
 ## Installation of LOST
 ### Dependencies
 

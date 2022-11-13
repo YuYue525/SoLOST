@@ -189,7 +189,7 @@ if __name__ == "__main__":
 
         # ------------ GROUND-TRUTH -------------------------------------------
         if not args.no_evaluation:
-            gt_bbxs, gt_cls = dataset.extract_gt(inp[1], im_name)
+            gt_bbxs, gt_cls = dataset.extract_gt(inp[1])
 
             if gt_bbxs is not None:
                 # Discard images with no gt annotations

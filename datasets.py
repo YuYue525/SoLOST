@@ -197,7 +197,7 @@ class Dataset:
         if "VOC" in self.dataset_name:
             return inp["annotation"]["filename"]
         elif "COCO" in self.dataset_name:
-            return f"COCO_{self.set}{self.year}_{str(inp[0]['image_id'].zfill(12))}.jpg"
+            return f"COCO_{self.set}{self.year}_{str(inp[0]['image_id']).zfill(12)}.jpg"
         else:
             raise ValueError("Unknown dataset.")
 

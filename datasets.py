@@ -282,7 +282,7 @@ class ImageDataset:
     def get_img(self):
         return skimage.io.imread(self.img_path)
 
-
+'''
 if __name__ == '__main__':
     dataset = Dataset("VOC07", "train")
     pbar = tqdm(dataset.dataloader)
@@ -290,3 +290,4 @@ if __name__ == '__main__':
         img = inp[0]
         print(dataset.get_img_name(inp[1]))
         break
+'''

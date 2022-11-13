@@ -19,7 +19,6 @@ class vgg16Bottom(nn.Module):
         return x
 
 class ResNet50Bottom(nn.Module):
-
     def __init__(self, original_model):
         super(ResNet50Bottom, self).__init__()
         self.features = nn.Sequential(*list(original_model.children())[:-2])
@@ -30,19 +29,17 @@ class ResNet50Bottom(nn.Module):
 
 def create_model(arch, patch_size, resnet_dilate, device):
     pretrained_flag = True if "imagenet" in arch else False
-    replace_stride_with_dilation = None
 
-    if "resnet" in arch:
-        if resnet_dilate == 1:
-            replace_stride_with_dilation = [False, False, False]
-        elif resnet_dilate == 2:
-            replace_stride_with_dilation = [False, False, True]
-        elif resnet_dilate == 4:
-            replace_stride_with_dilation = [False, True, True]
-
-        model = resnet50(pretrained=pretrained_flag, replace_stride_with_dilation=replace_stride_with_dilation)
-    elif "vgg16" in arch:
+    if "vgg16" in arch:
         model = vgg16(pretrained=pretrained_flag)
+    elif "resnet" in arch:
+        replace_stride_with_dilation = [False, False, False]
+        if resnet_dilate == 2:
+            replace_stride_with_dilation[2] = True
+        elif resnet_dilate == 4:
+            replace_stride_with_dilation[1] = True
+            replace_stride_with_dilation[2] = True
+        model = resnet50(pretrained=pretrained_flag, replace_stride_with_dilation=replace_stride_with_dilation)
     else:
         model = vits.__dict__[arch](patch_size=patch_size, num_classes=0)
 
@@ -65,14 +62,11 @@ def create_model(arch, patch_size, resnet_dilate, device):
 
         if url is not None:
             print("Since no pretrained weights have been provided, we load the reference pretrained DINO weights.")
-
             state_dict = torch.hub.load_state_dict_from_url(url="https://dl.fbaipublicfiles.com/dino/" + url)
-            strict_loading = False if "resnet" in arch else True
-            msg = model.load_state_dict(state_dict, strict=strict_loading)
-
+            msg = model.load_state_dict(state_dict, strict=(False if "resnet" in arch else True))
             print("Pretrained weights found at {} and loaded with msg: {}".format(url, msg))
         else:
-            print("There is no reference weights available for this model => We use random weights.")
+            print("There is no reference weights available for this model, so we use random weights.")
 
     if "resnet" in arch:
         model = ResNet50Bottom(model)

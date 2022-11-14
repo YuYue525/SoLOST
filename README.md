@@ -320,7 +320,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td>ResNet50</td>
     <td>Imagenet</td>
     <td><B>33.8</td>
-    <td>31.1</td>
+    <td>32.3</td>
     <td><B>39.1</td>
     <td>36.2</td>
     <td>25.5</td>

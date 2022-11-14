@@ -210,8 +210,8 @@ In our implementation, we also tried Pearson product-moment correlation coeffici
     <td><B>61.6</td>
     <td>64.1</td>
     <td>64.1</td>
-    <td>50.7</td>
-    <td>50.7</td>
+    <td><B>50.7</td>
+    <td>50.6</td>
   <tr>
   <tr>
     <td>ViT-S/8</td>

@@ -227,7 +227,7 @@ In our implementation, we also tried Pearson product-moment correlation coeffici
     <td>ViT-B/16</td>
     <td>DINO</td>
     <td>60.0</td>
-    <td><B>60.1</td>
+    <td><B>60.3</td>
     <td>63.3</td>
     <td><B>63.4</td>
     <td>50.0</td>

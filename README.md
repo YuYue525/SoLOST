@@ -257,9 +257,9 @@ In our implementation, we also tried Pearson product-moment correlation coeffici
 
 Previous results on the dataset `VOC07` can be obtained by launching: 
 ```bash
-python main_lost.py --dataset VOC07 --set trainval #VIT-S/16
-python main_lost.py --dataset VOC07 --set trainval --patch_size 8 #VIT-S/8
-python main_lost.py --dataset VOC07 --set trainval --arch vit_base #VIT-B/16
-python main_lost.py --dataset VOC07 --set trainval --arch resnet50 #Resnet50/DINO
-python main_lost.py --dataset VOC07 --set trainval --arch resnet50_imagenet #Resnet50/imagenet
+python main.py --dataset VOC07 --set trainval #VIT-S/16
+python main.py --dataset VOC07 --set trainval --patch_size 8 #VIT-S/8
+python main.py --dataset VOC07 --set trainval --arch vit_base #VIT-B/16
+python main.py --dataset VOC07 --set trainval --arch resnet50 #Resnet50/DINO
+python main.py --dataset VOC07 --set trainval --arch resnet50_imagenet #Resnet50/imagenet
 ```

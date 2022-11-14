@@ -231,7 +231,7 @@ In our implementation, we also tried Pearson product-moment correlation coeffici
     <td>63.3</td>
     <td><B>63.4</td>
     <td>50.0</td>
-    <td>50.0</td>
+    <td><B>50.3</td>
   <tr>
   <tr>
     <td>ResNet50</td>

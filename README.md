@@ -185,3 +185,12 @@ However, when measuring the distance among features obtained, the original paper
     <td>25.5</td>
   <tr>
 </table>
+
+Previous results on the dataset `VOC07` can be obtained by launching: 
+```bash
+python main_lost.py --dataset VOC07 --set trainval #VIT-S/16
+python main_lost.py --dataset VOC07 --set trainval --patch_size 8 #VIT-S/8
+python main_lost.py --dataset VOC07 --set trainval --arch vit_base #VIT-B/16
+python main_lost.py --dataset VOC07 --set trainval --arch resnet50 #Resnet50/DINO
+python main_lost.py --dataset VOC07 --set trainval --arch resnet50_imagenet #Resnet50/imagenet
+```

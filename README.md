@@ -177,7 +177,7 @@ However, when measuring the distance among features obtained, the original paper
   <tr>
 </table>
 
-In our implementation, we also tried Pearson product-moment correlation coefficient to measure the patch similarity. The following table shows the results:
+In our implementation, we also tried Pearson product-moment correlation coefficient (PCCs) to measure the patch similarity. The following table shows the results:
 
 <table>
   <tr>
@@ -192,11 +192,11 @@ In our implementation, we also tried Pearson product-moment correlation coeffici
   </tr>
    <tr>
     <th>dot product</th>
-    <th>PPMCC</th>
+    <th>PCCs</th>
     <th>dot product</th>
-    <th>PPMCC</th>
+    <th>PCCs</th>
     <th>dot product</th>
-    <th>PPMCC</th>
+    <th>PCCs</th>
   </tr>
   <tr>
     <td>ViT-S/16</td>

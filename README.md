@@ -178,7 +178,7 @@ However, when measuring the distance among features obtained, the original paper
     <td>ResNet50</td>
     <td>Imagenet</td>
     <td>33.5</td>
-    <td>33.5</td>
+    <td>33.6</td>
     <td>39.1</td>
     <td>39.1</td>
     <td>25.5</td>

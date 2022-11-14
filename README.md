@@ -310,7 +310,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td>ResNet50</td>
     <td>DINO</td>
     <td><B>36.8</td>
-    <td>30.8</td>
+    <td>33.5</td>
     <td><B>42.7</td>
     <td>35.9</td>
     <td>26.5</td>

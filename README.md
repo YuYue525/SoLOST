@@ -150,7 +150,7 @@ However, when measuring the distance among features obtained, the original paper
     <td>55.3</td>
     <td>55.3</td>
     <td>57.0</td>
-    <td>57.0</td>
+    <td>57.2</td>
     <td>49.5</td>
     <td>49.5</td>
   <tr>

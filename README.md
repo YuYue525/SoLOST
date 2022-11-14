@@ -209,15 +209,15 @@ In our implementation, we also tried Pearson product-moment correlation coeffici
     <td>61.5</td>
     <td><B>61.6</td>
     <td>64.1</td>
-    <td><B>64.1</td>
+    <td>64.1</td>
     <td>50.7</td>
     <td>50.7</td>
   <tr>
   <tr>
     <td>ViT-S/8</td>
     <td>DINO</td>
-    <td>55.3</td>
-    <td>55.3</td>
+    <td><B>55.3</td>
+    <td>55.0</td>
     <td>57.0</td>
     <td><B>57.2</td>
     <td>49.5</td>

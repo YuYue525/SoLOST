@@ -107,7 +107,7 @@ We have tested the method on different setups of the VIT model, corloc results a
   <tr>
     <td>ResNet50</td>
     <td>Imagenet</td>
-    <td>33.5</td>
+    <td>33.8</td>
     <td>39.1</td>
     <td>25.5</td>
   <tr>
@@ -177,7 +177,7 @@ However, when measuring the distance among features obtained, the original paper
   <tr>
     <td>ResNet50</td>
     <td>Imagenet</td>
-    <td>33.5</td>
+    <td><B>33.8</td>
     <td>33.6</td>
     <td>39.1</td>
     <td>39.1</td>

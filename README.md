@@ -84,7 +84,7 @@ We have tested the method on different setups of the VIT model, corloc results a
     <td>DINO</td>
     <td>55.3</td>
     <td>57.0</td>
-    <td>49.5</td>
+    <td>49.8</td>
   <tr>
   <tr>
     <td>ViT-B/16</td>
@@ -147,7 +147,7 @@ However, when measuring the distance among features obtained, the original paper
     <td>55.3</td>
     <td>57.0</td>
     <td><B>57.2</td>
-    <td>49.5</td>
+    <td>49.8</td>
     <td><B>49.9</td>
   <tr>
   <tr>
@@ -220,7 +220,7 @@ In our implementation, we also tried Pearson product-moment correlation coeffici
     <td>55.0</td>
     <td>57.0</td>
     <td><B>57.1</td>
-    <td>49.5</td>
+    <td>49.8</td>
     <td>49.5</td>
   <tr>
   <tr>

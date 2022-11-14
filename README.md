@@ -67,13 +67,11 @@ We have tested the method on different setups of the VIT model, corloc results a
 
 <table>
   <tr>
-    <th>arch</th>
-    <th>pre-training</th>
+    <th rowspan="2">arch</th>
+    <th rowspan="2">pre-training</th>
     <th colspan="3">dataset</th>
   </tr>
   <tr>
-    <th></th>
-    <th></th>
     <th>VOC07</th>
     <th>VOC12</th>
     <th>COCO20k</th>

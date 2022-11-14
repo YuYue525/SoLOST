@@ -138,50 +138,50 @@ However, when measuring the distance among features obtained, the original paper
     <td>ViT-S/16</td>
     <td>DINO</td>
     <td>61.5</td>
-    <td>64.1</td>
-    <td>50.7</td>
     <td><B>61.7</td>
+    <td>64.1</td>
     <td><B>64.3</td>
+    <td>50.7</td>
     <td>50.7</td>
   <tr>
   <tr>
     <td>ViT-S/8</td>
     <td>DINO</td>
     <td>55.3</td>
-    <td>57.0</td>
-    <td>49.5</td>
     <td>55.3</td>
     <td>57.0</td>
+    <td>57.0</td>
+    <td>49.5</td>
     <td>49.5</td>
   <tr>
   <tr>
     <td>ViT-B/16</td>
     <td>DINO</td>
     <td>60.1</td>
-    <td>63.3</td>
-    <td>50.0</td>
     <td>60.1</td>
     <td>63.3</td>
+    <td>63.3</td>
+    <td>50.0</td>
     <td>50.0</td>
   <tr>
   <tr>
     <td>ResNet50</td>
     <td>DINO</td>
     <td>36.8</td>
-    <td>42.7</td>
-    <td>26.5</td>
     <td>36.8</td>
     <td>42.7</td>
+    <td>42.7</td>
+    <td>26.5</td>
     <td>26.5</td>
   <tr>
   <tr>
     <td>ResNet50</td>
     <td>Imagenet</td>
     <td>33.5</td>
-    <td>39.1</td>
-    <td>25.5</td>
     <td>33.5</td>
     <td>39.1</td>
+    <td>39.1</td>
+    <td>25.5</td>
     <td>25.5</td>
   <tr>
 </table>

@@ -114,3 +114,55 @@ We have tested the method on different setups of the VIT model, corloc results a
     <td>25.5</td>
   <tr>
 </table>
+
+However, when measuring the distance among features obtained, the original paper directly computes the dot products of feature pairs without normalization. In our implementation, we also use other measurement like cosine similarity to measure the patch similarity. The following table shows the results:
+
+<table>
+  <tr>
+    <th>arch</th>
+    <th>pre-training</th>
+    <th colspan="3">dataset</th>
+  </tr>
+  <tr>
+    <th></th>
+    <th></th>
+    <th>VOC07</th>
+    <th>VOC12</th>
+    <th>COCO20k</th>
+  </tr>
+  <tr>
+    <td>ViT-S/16</td>
+    <td>DINO</td>
+    <td>61.7</td>
+    <td>64.3</td>
+    <td>50.7</td>
+  <tr>
+  <tr>
+    <td>ViT-S/8</td>
+    <td>DINO</td>
+    <td>55.5</td>
+    <td>57.0</td>
+    <td>49.5</td>
+  <tr>
+  <tr>
+    <td>ViT-B/16</td>
+    <td>DINO</td>
+    <td>60.1</td>
+    <td>63.3</td>
+    <td>50.0</td>
+  <tr>
+  <tr>
+    <td>ResNet50</td>
+    <td>DINO</td>
+    <td>36.8</td>
+    <td>42.7</td>
+    <td>26.5</td>
+  <tr>
+  <tr>
+    <td>ResNet50</td>
+    <td>Imagenet</td>
+    <td>33.5</td>
+    <td>39.1</td>
+    <td>25.5</td>
+  <tr>
+</table>

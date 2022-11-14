@@ -18,6 +18,13 @@ We refer to the work from the following citation:
 ```
 
 ## Installation of LOST
+
+### Repo Initialization
+
+```
+git clone --recursive https://github.com/YuYue525/AI6103_project.git
+```
+
 ### Dependencies
 
 This code was implemented with python 3.7, PyTorch 1.7.1 and CUDA 10.2. Please install [PyTorch](https://pytorch.org/). In order to install the additionnal dependencies, please launch the following command:
@@ -29,9 +36,7 @@ pip install -r requirements.txt
 ### Install DINO
 This method is based on DINO [paper](https://arxiv.org/pdf/2104.14294.pdf). The framework can be installed using the following commands:
 ```
-git clone https://github.com/facebookresearch/dino.git
-cd dino; 
-touch __init__.py
+cd dino; touch __init__.py
 echo -e "import sys\nfrom os.path import dirname, join\nsys.path.insert(0, join(dirname(__file__), '.'))" >> __init__.py; cd ../;
 ```
 

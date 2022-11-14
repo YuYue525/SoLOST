@@ -168,7 +168,7 @@ However, when measuring the distance among features obtained, the original paper
     <td>ResNet50</td>
     <td>DINO</td>
     <td>36.8</td>
-    <td>36.8</td>
+    <td>36.5</td>
     <td>42.7</td>
     <td>42.7</td>
     <td>26.5</td>

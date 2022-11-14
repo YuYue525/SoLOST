@@ -221,7 +221,7 @@ In our implementation, we also tried Pearson product-moment correlation coeffici
     <td>57.0</td>
     <td><B>57.1</td>
     <td>49.8</td>
-    <td>49.5</td>
+    <td>49.8</td>
   <tr>
   <tr>
     <td>ViT-B/16</td>

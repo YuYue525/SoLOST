@@ -148,7 +148,7 @@ However, when measuring the distance among features obtained, the original paper
     <td>57.0</td>
     <td><B>57.2</td>
     <td>49.5</td>
-    <td>49.5</td>
+    <td><B>49.9</td>
   <tr>
   <tr>
     <td>ViT-B/16</td>

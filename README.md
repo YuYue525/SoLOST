@@ -94,7 +94,7 @@ We have tested the method on different setups of the VIT model, corloc results a
     <td>ViT-B/16</td>
     <td>DINO</td>
     <td>60.0</td>
-    <td>63.4</td>
+    <td>63.3</td>
     <td>50.0</td>
   <tr>
   <tr>
@@ -159,8 +159,8 @@ However, when measuring the distance among features obtained, the original paper
     <td>DINO</td>
     <td>60.0</td>
     <td><B>60.1</td>
-    <td>63.4</td>
     <td>63.3</td>
+    <td><B>63.4</td>
     <td>50.0</td>
     <td>50.0</td>
   <tr>

@@ -254,6 +254,79 @@ In our implementation, we also tried Pearson product-moment correlation coeffici
     <td>25.5</td>
   <tr>
 </table>
+     
+In our implementation, we also proposed the improved method Seed-orientated LOST (SoLost), the following table shows the improvement:
+     
+<table>
+  <tr>
+    <th rowspan="3">arch</th>
+    <th rowspan="3">pre-training</th>
+    <th colspan="6">dataset</th>
+  </tr>
+  <tr>
+    <th colspan="2">VOC07</th>
+    <th colspan="2">VOC12</th>
+    <th colspan="2">COCO20k</th>
+  </tr>
+   <tr>
+    <th>LOST</th>
+    <th>SoLOST</th>
+    <th>LOST</th>
+    <th>SoLOST</th>
+    <th>LOST</th>
+    <th>SoLOST</th>
+  </tr>
+  <tr>
+    <td>ViT-S/16</td>
+    <td>DINO</td>
+    <td>61.5</td>
+    <td><B>62.2</td>
+    <td>64.1</td>
+    <td>64.1</td>
+    <td><B>50.7</td>
+    <td>50.6</td>
+  <tr>
+  <tr>
+    <td>ViT-S/8</td>
+    <td>DINO</td>
+    <td>55.3</td>
+    <td><B>56.3</td>
+    <td>57.0</td>
+    <td><B>57.1</td>
+    <td>49.8</td>
+    <td>49.8</td>
+  <tr>
+  <tr>
+    <td>ViT-B/16</td>
+    <td>DINO</td>
+    <td>60.0</td>
+    <td><B>60.1</td>
+    <td>63.3</td>
+    <td><B>63.4</td>
+    <td>50.0</td>
+    <td><B>50.3</td>
+  <tr>
+  <tr>
+    <td>ResNet50</td>
+    <td>DINO</td>
+    <td><B>36.8</td>
+    <td>30.8</td>
+    <td><B>42.7</td>
+    <td>35.9</td>
+    <td>26.5</td>
+    <td>26.5</td>
+  <tr>
+  <tr>
+    <td>ResNet50</td>
+    <td>Imagenet</td>
+    <td><B>33.8</td>
+    <td>31.1</td>
+    <td><B>39.1</td>
+    <td>36.2</td>
+    <td>25.5</td>
+    <td>25.5</td>
+  <tr>
+</table>
 
 Previous results on the dataset `VOC07` can be obtained by launching: 
 ```bash

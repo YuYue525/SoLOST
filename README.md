@@ -119,14 +119,21 @@ However, when measuring the distance among features obtained, the original paper
 
 <table>
   <tr>
-    <th>arch</th>
-    <th>pre-training</th>
-    <th colspan="3">dataset</th>
+    <th rowspan="3">arch</th>
+    <th rowspan="3">pre-training</th>
+    <th colspan="6">dataset</th>
   </tr>
   <tr>
-    <th></th>
-    <th></th>
+    <th colspan="2">VOC07</th>
+    <th colspan="2">VOC12</th>
+    <th colspan="2">COCO20k</th>
+  </tr>
+   <tr>
+
     <th>VOC07</th>
+    <th>VOC12</th>
+    <th>COCO20k</th>
+     <th>VOC07</th>
     <th>VOC12</th>
     <th>COCO20k</th>
   </tr>

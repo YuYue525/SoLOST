@@ -290,7 +290,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td>ViT-S/8</td>
     <td>DINO</td>
     <td>55.3</td>
-    <td><B>56.3</td>
+    <td><B>59.8</td>
     <td>57.0</td>
     <td><B>57.1</td>
     <td>49.8</td>
@@ -300,7 +300,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td>ViT-B/16</td>
     <td>DINO</td>
     <td>60.0</td>
-    <td><B>60.1</td>
+    <td><B>61.8</td>
     <td>63.3</td>
     <td><B>63.4</td>
     <td>50.0</td>
@@ -310,7 +310,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td>ResNet50</td>
     <td>DINO</td>
     <td><B>36.8</td>
-    <td>33.5</td>
+    <td>34.6</td>
     <td><B>42.7</td>
     <td>35.9</td>
     <td>26.5</td>
@@ -320,7 +320,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td>ResNet50</td>
     <td>Imagenet</td>
     <td><B>33.8</td>
-    <td>32.3</td>
+    <td>32.6</td>
     <td><B>39.1</td>
     <td>36.2</td>
     <td>25.5</td>

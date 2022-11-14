@@ -129,17 +129,19 @@ However, when measuring the distance among features obtained, the original paper
     <th colspan="2">COCO20k</th>
   </tr>
    <tr>
-
-    <th>VOC07</th>
-    <th>VOC12</th>
-    <th>COCO20k</th>
-     <th>VOC07</th>
-    <th>VOC12</th>
-    <th>COCO20k</th>
+    <th>dot product</th>
+    <th>cosine sim</th>
+    <th>dot product</th>
+    <th>cosine sim</th>
+    <th>dot product</th>
+    <th>cosine sim</th>
   </tr>
   <tr>
     <td>ViT-S/16</td>
     <td>DINO</td>
+    <td>61.5</td>
+    <td>64.1</td>
+    <td>50.7</td>
     <td>61.7</td>
     <td>64.3</td>
     <td>50.7</td>
@@ -150,10 +152,16 @@ However, when measuring the distance among features obtained, the original paper
     <td>55.5</td>
     <td>57.0</td>
     <td>49.5</td>
+    <td>55.5</td>
+    <td>57.0</td>
+    <td>49.5</td>
   <tr>
   <tr>
     <td>ViT-B/16</td>
     <td>DINO</td>
+    <td>60.1</td>
+    <td>63.3</td>
+    <td>50.0</td>
     <td>60.1</td>
     <td>63.3</td>
     <td>50.0</td>
@@ -164,10 +172,16 @@ However, when measuring the distance among features obtained, the original paper
     <td>36.8</td>
     <td>42.7</td>
     <td>26.5</td>
+    <td>36.8</td>
+    <td>42.7</td>
+    <td>26.5</td>
   <tr>
   <tr>
     <td>ResNet50</td>
     <td>Imagenet</td>
+    <td>33.5</td>
+    <td>39.1</td>
+    <td>25.5</td>
     <td>33.5</td>
     <td>39.1</td>
     <td>25.5</td>

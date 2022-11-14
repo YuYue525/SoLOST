@@ -37,15 +37,6 @@ echo -e "import sys\nfrom os.path import dirname, join\nsys.path.insert(0, join(
 
 The code was made using the commit ba9edd1 of DINO repo (please rebase if breakage).
 
-## Apply LOST to one image
-Following are scripts to apply LOST to an image defined via the `image_path` parameter and visualize the predictions (`pred`), the maps of the Figure 2 in the paper (`fms`) and the visulization of the seed expansion (`seed_expansion`). Box predictions are also stored in the output directory given by parameter `output_dir`.
-
-```
-python main_lost.py --image_path examples/VOC07_000236.jpg --visualize pred
-python main_lost.py --image_path examples/VOC07_000236.jpg --visualize fms
-python main_lost.py --image_path examples/VOC07_000236.jpg --visualize seed_expansion
-```
-
 ## Launching LOST on datasets
 Following are the different steps to reproduce the results of **LOST** presented in the paper. 
 
@@ -133,6 +124,79 @@ However, when measuring the distance among features obtained, the original paper
     <th>cosine sim</th>
     <th>dot product</th>
     <th>cosine sim</th>
+  </tr>
+  <tr>
+    <td>ViT-S/16</td>
+    <td>DINO</td>
+    <td>61.5</td>
+    <td><B>61.7</td>
+    <td>64.1</td>
+    <td><B>64.3</td>
+    <td>50.7</td>
+    <td>50.7</td>
+  <tr>
+  <tr>
+    <td>ViT-S/8</td>
+    <td>DINO</td>
+    <td>55.3</td>
+    <td>55.3</td>
+    <td>57.0</td>
+    <td><B>57.2</td>
+    <td>49.5</td>
+    <td>49.5</td>
+  <tr>
+  <tr>
+    <td>ViT-B/16</td>
+    <td>DINO</td>
+    <td>60.0</td>
+    <td><B>60.1</td>
+    <td>63.3</td>
+    <td><B>63.4</td>
+    <td>50.0</td>
+    <td>50.0</td>
+  <tr>
+  <tr>
+    <td>ResNet50</td>
+    <td>DINO</td>
+    <td><B>36.8</td>
+    <td>36.5</td>
+    <td><B>42.7</td>
+    <td>42.5</td>
+    <td>26.5</td>
+    <td>26.5</td>
+  <tr>
+  <tr>
+    <td>ResNet50</td>
+    <td>Imagenet</td>
+    <td><B>33.8</td>
+    <td>33.6</td>
+    <td><B>39.1</td>
+    <td>39.0</td>
+    <td>25.5</td>
+    <td>25.5</td>
+  <tr>
+</table>
+
+In our implementation, we also tried Pearson product-moment correlation coefficient to measure the patch similarity. The following table shows the results:
+
+<table>
+  <tr>
+    <th rowspan="3">arch</th>
+    <th rowspan="3">pre-training</th>
+    <th colspan="6">dataset</th>
+  </tr>
+  <tr>
+    <th colspan="2">VOC07</th>
+    <th colspan="2">VOC12</th>
+    <th colspan="2">COCO20k</th>
+  </tr>
+   <tr>
+    <th>dot product</th>
+    <th>PPMCC</th>
+    <th>dot product</th>
+    <th>PPMCC</th>
+    <th>dot product</th>
+    <th>PPMCC</th>
   </tr>
   <tr>
     <td>ViT-S/16</td>

@@ -169,8 +169,8 @@ However, when measuring the distance among features obtained, the original paper
     <td>DINO</td>
     <td><B>36.8</td>
     <td>36.5</td>
-    <td>42.7</td>
-    <td>42.7</td>
+    <td><B>42.7</td>
+    <td>42.5</td>
     <td>26.5</td>
     <td>26.5</td>
   <tr>

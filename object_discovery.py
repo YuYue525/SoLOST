@@ -9,22 +9,10 @@ import numpy as np
 from datasets import bbox_iou
 
 def lost(feats, dims, scales, init_image_size, k_patches=100):
-    """
-    Implementation of LOST method.
-    Inputs
-        feats: the pixel/patche features of an image
-        dims: dimension of the map from which the features are used
-        scales: from image to map scale
-        init_image_size: size of the image
-        k_patches: number of k patches retrieved that are compared to the seed at seed expansion
-    Outputs
-        pred: box predictions
-        A: binary affinity matrix
-        scores: lowest degree scores for all patches
-        seed: selected patch corresponding to an object
-    """
     # Compute the similarity
-    A = (feats @ feats.transpose(1, 2)).squeeze()
+    # A = (feats @ feats.transpose(1, 2)).squeeze() # not cos similarity
+    a = feats.squeeze() / torch.norm(feats.squeeze(), dim=-1, keepdim=True)
+    A = torch.mm(a, a.T)
 
     # Compute the inverse degree centrality measure per patch
     sorted_patches, scores = patch_scoring(A)

@@ -249,7 +249,7 @@ In our implementation, we also tried Pearson product-moment correlation coeffici
     <td><B>33.8</td>
     <td>31.1</td>
     <td><B>39.1</td>
-    <td>39.0</td>
+    <td>36.2</td>
     <td>25.5</td>
     <td>25.5</td>
   <tr>

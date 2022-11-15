@@ -184,7 +184,8 @@ if __name__ == "__main__":
                 [w_featmap, h_featmap],
                 scales,
                 init_image_size,
-                k_patches=args.k_patches,
+                # k_patches=args.k_patches,
+                potencial_percentage = args.potencial_percentage
             )
 
             # ------------ Visualizations -------------------------------------------

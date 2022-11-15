@@ -292,7 +292,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td>55.3</td>
     <td><B>59.8</td>
     <td>57.0</td>
-    <td><B>62.5 (0.8)</td>
+    <td><B>64.3 (0.6)</td>
     <td>49.8</td>
     <td><B>51.1 (0.5)</td>
   <tr>

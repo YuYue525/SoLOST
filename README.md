@@ -280,7 +280,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td>ViT-S/16</td>
     <td>DINO</td>
     <td>61.5</td>
-    <td><B>62.2</td>
+    <td><B>62.2 (0.6)</td>
     <td>64.1</td>
     <td><B>64.8</td>
     <td>50.7</td>

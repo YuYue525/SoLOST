@@ -30,8 +30,10 @@ def init_parser():
 
     parser.add_argument("--which_features", type=str, default="k", choices=["k", "q", "v"],
                         help="Which features to use")
-    parser.add_argument("--k_patches", type=int, default=100,
-                        help="Number of patches with the lowest degree considered.")
+    # parser.add_argument("--k_patches", type=int, default=100,
+                        # help="Number of patches with the lowest degree considered.")
+    parser.add_argument("--potencial_percentage", type=float, default=0.6,
+                        help="percentage of potencials considered.")
 
     parser.add_argument("--dinoseg", action="store_true", help="Apply DINO-seg baseline.")
     parser.add_argument("--dinoseg_head", type=int, default=4)

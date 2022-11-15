@@ -313,7 +313,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td>34.6</td>
     <td><B>42.7</td>
     <td>35.9</td>
-    <td>26.5</td>
+    <td><B>26.5</td>
     <td>24.3</td>
   <tr>
   <tr>
@@ -323,8 +323,8 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td>32.6</td>
     <td><B>39.1</td>
     <td>36.2</td>
-    <td>25.5</td>
-    <td>25.5</td>
+    <td><B>25.5</td>
+    <td>24.4</td>
   <tr>
 </table>
 

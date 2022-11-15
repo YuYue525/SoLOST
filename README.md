@@ -270,7 +270,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
   </tr>
    <tr>
     <th>LOST</th>
-    <th>SoLOST</th>
+    <th>SoLOST (60% potencials)</th>
     <th>LOST</th>
     <th>SoLOST (60% potencials)</th>
     <th>LOST</th>

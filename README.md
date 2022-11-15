@@ -274,7 +274,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <th>LOST</th>
     <th>SoLOST</th>
     <th>LOST</th>
-    <th>SoLOST</th>
+    <th>SoLOST (50% potencials)</th>
   </tr>
   <tr>
     <td>ViT-S/16</td>
@@ -284,7 +284,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td>64.1</td>
     <td><B>64.8 (0.6)</td>
     <td>50.7</td>
-    <td><B>52.2 (0.5)</td>
+    <td><B>52.2</td>
   <tr>
   <tr>
     <td>ViT-S/8</td>
@@ -294,7 +294,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td>57.0</td>
     <td><B>64.3 (0.6)</td>
     <td>49.8</td>
-    <td><B>51.1 (0.5)</td>
+    <td><B>51.1</td>
   <tr>
   <tr>
     <td>ViT-B/16</td>
@@ -304,7 +304,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td>63.3</td>
     <td><B>64.4 (0.6)</td>
     <td>50.0</td>
-    <td><B>52.0 (0.5)</td>
+    <td><B>52.0</td>
   <tr>
   <tr>
     <td>ResNet50</td>
@@ -314,7 +314,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td><B>42.7</td>
     <td>37.6</td>
     <td><B>26.5</td>
-    <td>24.8 (0.5)</td>
+    <td>24.8</td>
   <tr>
   <tr>
     <td>ResNet50</td>

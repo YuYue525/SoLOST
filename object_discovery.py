@@ -8,7 +8,7 @@ import scipy.ndimage
 import numpy as np
 from datasets import bbox_iou
 
-def lost(feats, dims, scales, init_image_size, k_patches=100):
+def lost(feats, dims, scales, init_image_size, potencial_percentage=0.6):
     # Compute the similarity
     # A = (feats @ feats.transpose(1, 2)).squeeze() # not cos similarity
     a = feats.squeeze() / torch.norm(feats.squeeze(), dim=-1, keepdim=True)
@@ -18,8 +18,13 @@ def lost(feats, dims, scales, init_image_size, k_patches=100):
 
     seed = sorted_patches[0]
 
-    potentials = sorted_patches[:k_patches]
-    similars = potentials[A[seed, potentials] > 0.0]
+    related_num = int(torch.sum(A[seed, :] > 0.0))
+    related_index = torch.nonzero(A[seed, :] > 0).squeeze()
+
+    # potentials = sorted_patches[:k_patches]
+    # similars = potentials[A[seed, potentials] > 0.0]
+    potentials = torch.tensor([x for x in sorted_patches if x in related_index])
+    similars = potentials[: int(potencial_percentage * related_num)]
     M = torch.sum(A[similars, :], dim=0)
 
     pred, _ = detect_box(M, seed, dims, scales=scales, initial_im_size=init_image_size[1:])

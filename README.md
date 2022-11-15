@@ -304,7 +304,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td>63.3</td>
     <td><B>63.9</td>
     <td>50.0</td>
-    <td><B>51.2</td>
+    <td><B>52.0 (0.5)</td>
   <tr>
   <tr>
     <td>ResNet50</td>

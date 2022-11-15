@@ -328,7 +328,8 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
   <tr>
 </table>
 
-Previous results on the dataset `VOC07` can be obtained by launching: 
+Previous results on the dataset `VOC07` can be obtained by launching the following commands. Visualize the predictions (`pred`), the maps of the Figure 2 in the paper (`fms`) and the visulization of the seed expansion (`seed_expansion`). Box predictions are also stored in the output directory given by parameter `output_dir`.
+
 ```bash
 python main.py --dataset VOC07 --set trainval #VIT-S/16
 python main.py --dataset VOC07 --set trainval --patch_size 8 #VIT-S/8

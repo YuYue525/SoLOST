@@ -283,8 +283,8 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td><B>62.8</td>
     <td>64.1</td>
     <td>64.1</td>
-    <td><B>50.7</td>
-    <td>52.0</td>
+    <td>50.7</td>
+    <td><B>52.0</td>
   <tr>
   <tr>
     <td>ViT-S/8</td>

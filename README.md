@@ -281,8 +281,8 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td>DINO</td>
     <td>61.5</td>
     <td><B>62.2</td>
-    <td>64.1</td>
-    <td>64.1</td>
+    <td><B>64.1</td>
+    <td>63.7</td>
     <td>50.7</td>
     <td><B>52.0</td>
   <tr>
@@ -292,7 +292,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td>55.3</td>
     <td><B>59.8</td>
     <td>57.0</td>
-    <td><B>57.1</td>
+    <td><B>62.5</td>
     <td>49.8</td>
     <td>49.8</td>
   <tr>
@@ -302,7 +302,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td>60.0</td>
     <td><B>61.8</td>
     <td>63.3</td>
-    <td><B>63.4</td>
+    <td><B>63.9</td>
     <td>50.0</td>
     <td><B>51.2</td>
   <tr>
@@ -312,7 +312,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td><B>36.8</td>
     <td>34.6</td>
     <td><B>42.7</td>
-    <td>35.9</td>
+    <td>37.6</td>
     <td><B>26.5</td>
     <td>24.3</td>
   <tr>

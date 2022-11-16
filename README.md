@@ -112,7 +112,7 @@ We have tested the method on different setups of the VIT model, corloc results a
     <td>Imagenet</td>
     <td>41.4</td>
     <td>47.2</td>
-    <td></td>
+    <td>30.2</td>
   <tr>
 </table>
 
@@ -194,7 +194,7 @@ However, when measuring the distance among features obtained, the original paper
     <td><B>41.6</td>
     <td><B>47.2</td>
     <td>47.0</td>
-    <td></td>
+    <td>30.2</td>
     <td></td>
   <tr>
 </table>
@@ -277,7 +277,7 @@ In our implementation, we also tried Pearson product-moment correlation coeffici
     <td>-</td>
     <td><B>47.2</td>
     <td>-</td>
-    <td></td>
+    <td>30.2</td>
     <td></td>
   <tr>
 </table>
@@ -360,7 +360,7 @@ In our implementation, we also proposed the improved method Similarity-orientate
     <td><B>41.9</td>
     <td>47.2</td>
     <td><B>48.9</td>
-    <td></td>
+    <td>30.2</td>
     <td></td>
   <tr>
 </table>

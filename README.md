@@ -333,6 +333,16 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td><B>25.5</td>
     <td>24.7</td>
   <tr>
+  <tr>
+    <td>VGG16</td>
+    <td>Imagenet</td>
+    <td>41.4</td>
+    <td>32.6</td>
+    <td>47.2</td>
+    <td>37.9</td>
+    <td><B>25.5</td>
+    <td>24.7</td>
+  <tr>
 </table>
 
 Previous results on the dataset `VOC07` can be obtained by launching the following commands. Visualize the predictions (`pred`), the maps of the Figure 2 in the paper (`fms`) and the visulization of the seed expansion (`seed_expansion`). Box predictions are also stored in the output directory given by parameter `output_dir`.

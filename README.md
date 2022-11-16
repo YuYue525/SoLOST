@@ -337,7 +337,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td>VGG16</td>
     <td>Imagenet</td>
     <td>41.4</td>
-    <td>32.6</td>
+    <td>41.9</td>
     <td>47.2</td>
     <td><B>48.9</td>
     <td><B>25.5</td>

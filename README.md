@@ -351,7 +351,7 @@ In our implementation, we also proposed the improved method Similarity-orientate
     <td>47.2</td>
     <td><B>48.9</td>
     <td>30.2</td>
-    <td><30.7></td>
+    <td><B>30.7</td>
   <tr>
 </table>
 

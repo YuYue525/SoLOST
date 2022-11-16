@@ -274,9 +274,9 @@ In our implementation, we also tried Pearson product-moment correlation coeffici
     <td>VGG16</td>
     <td>Imagenet</td>
     <td>41.4</td>
-    <td></td>
+    <td>-</td>
     <td><B>47.2</td>
-    <td></td>
+    <td>-</td>
     <td></td>
     <td></td>
   <tr>

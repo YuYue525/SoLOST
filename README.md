@@ -262,7 +262,7 @@ In our implementation, we also tried Pearson product-moment correlation coeffici
   <tr>
 </table>
      
-In our implementation, we also proposed the improved method Seed-orientated LOST (SoLOST), the following table shows the improvement:
+In our implementation, we also proposed the improved method Similarity-orientated LOST (SoLOST), the following table shows the improvement:
      
 <table>
   <tr>

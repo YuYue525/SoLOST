@@ -339,7 +339,7 @@ In our implementation, we also proposed the improved method Seed-orientated LOST
     <td>41.4</td>
     <td>32.6</td>
     <td>47.2</td>
-    <td>37.9</td>
+    <td><B>48.9</td>
     <td><B>25.5</td>
     <td>24.7</td>
   <tr>

@@ -194,8 +194,8 @@ However, when measuring the distance among features obtained, the original paper
     <td><B>41.6</td>
     <td><B>47.2</td>
     <td>47.0</td>
-    <td>30.2</td>
-    <td></td>
+    <td><B>30.2</td>
+    <td>30.1</td>
   <tr>
 </table>
 

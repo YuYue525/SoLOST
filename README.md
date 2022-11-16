@@ -107,6 +107,13 @@ We have tested the method on different setups of the VIT model, corloc results a
     <td>39.1</td>
     <td>25.5</td>
   <tr>
+  <tr>
+    <td>VGG16</td>
+    <td>Imagenet</td>
+    <td>41.4</td>
+    <td>47.2</td>
+    <td>25.5</td>
+  <tr>
 </table>
 
 However, when measuring the distance among features obtained, the original paper directly computes the dot products of feature pairs without normalization. In our implementation, we also use other measurement like cosine similarity to measure the patch similarity. The following table shows the results:

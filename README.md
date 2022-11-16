@@ -270,16 +270,6 @@ In our implementation, we also tried Pearson product-moment correlation coeffici
     <td>25.5</td>
     <td>25.5</td>
   <tr>
-  <tr>
-    <td>VGG16</td>
-    <td>Imagenet</td>
-    <td>41.4</td>
-    <td>-</td>
-    <td><B>47.2</td>
-    <td>-</td>
-    <td>30.2</td>
-    <td></td>
-  <tr>
 </table>
      
 In our implementation, we also proposed the improved method Similarity-orientated LOST (SoLOST), the following table shows the improvement:

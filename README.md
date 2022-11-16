@@ -191,7 +191,7 @@ However, when measuring the distance among features obtained, the original paper
     <td>VGG16</td>
     <td>Imagenet</td>
     <td>41.4</td>
-    <td></td>
+    <td><B>41.6</td>
     <td><B>47.2</td>
     <td></td>
     <td></td>

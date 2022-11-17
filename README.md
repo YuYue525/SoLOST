@@ -271,7 +271,9 @@ In our implementation, we also tried Pearson product-moment correlation coeffici
     <td>25.5</td>
   <tr>
 </table>
-     
+
+# SoLOST 
+
 In our implementation, we also proposed the improved method Similarity-orientated LOST (SoLOST), the following table shows the improvement:
      
 <table>

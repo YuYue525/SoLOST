@@ -180,7 +180,7 @@ class Dataset:
         if "VOC" in self.dataset_name:
             return inp["annotation"]["filename"]
         elif "COCO" in self.dataset_name:
-            return f"COCO_{self.set}{self.year}_{str(inp[0]['image_id']).zfill(12)}.jpg"
+            return inp[0]['image_id']
         else:
             raise ValueError("Unknown dataset.")
 
@@ -188,7 +188,7 @@ class Dataset:
         if "VOC" in self.dataset_name:
             image = skimage.io.imread(f"./datasets/VOC{self.year}/VOCdevkit/VOC{self.year}/JPEGImages/{img_name}")
         elif "COCO" in self.dataset_name:
-            image = skimage.io.imread(f"./datasets/COCO/images/{self.set}{self.year}/{img_name}")
+            image = skimage.io.imread(f"./datasets/COCO/images/{self.set}{self.year}/COCO_{self.set}{self.year}_{str(img_name).zfill(12)}.jpg")
         else:
             raise ValueError("Unknown dataset.")
         return image

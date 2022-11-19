@@ -461,25 +461,64 @@ The following table presents the obtained corloc results.
 
 <table>
   <tr>
-    <th rowspan="3">method</th>
-    <th colspan="6">dataset</th>
+    <th rowspan="2">method</th>
+    <th colspan="3">dataset</th>
   </tr>
   <tr>
-    <th colspan="2">VOC07</th>
-    <th colspan="2">VOC12</th>
-    <th colspan="2">COCO20k</th>
+    <th colspan="1">VOC07</th>
+    <th colspan="1">VOC12</th>
+    <th colspan="1">COCO20k</th>
   </tr>
   <tr>
     <td>LOST+CAD</td>
-    <td>61.5</td>
-    <td>61.5</td>
-    <td>61.5</td>
+    <td>60.7</td>
+    <td>67.8</td>
+    <td>53.3</td>
   <tr>
    <tr>
     <td>SoLOST+CAD</td>
-    <td>61.5</td>
-    <td>61.5</td>
-    <td>61.5</td>
+    <td>61.2</td>
+    <td>67.1</td>
+    <td>54.8</td>
+  <tr>
+</table>
+     
+The following table presents the obtained AP50 results.
+
+<table>
+  <tr>
+    <th rowspan="1"></th>
+    <th colspan="2">VOC07</th>
+     <th colspan="1">VOC12</th>
+     <th colspan="1">COCO20k</th>
+  </tr>
+  <tr>
+    <td>Training set (when applicable)</td>
+    <td>trainval</td>
+    <td>trainval</td>
+    <td>trainval</td>
+    <td>trainval</td>
+  <tr>
+  <tr>
+    <td>Evaluation set</td>
+    <td>test</td>
+    <td>trainval</td>
+    <td>trainval</td>
+    <td>trainval</td>
+  <tr>
+  <tr>
+    <td>LOST + CAD</td>
+    <td>23.4</td>
+    <td>23.7</td>
+    <td>30.7</td>
+    <td>8.8</td>
+  <tr>
+  <tr>
+    <td>SoLOST + CAD</td>
+    <td>25.7</td>
+    <td>25.7</td>
+    <td>31.0</td>
+    <td>9.1</td>
   <tr>
 </table>
 
@@ -490,9 +529,18 @@ We use the R50-C4 model of Detectron2 with ResNet50 pre-trained with DINO self-s
 Details:
 
 1\mini-batches of size 2 across 1 GPU using BatchNorm
+     
+     
 2\extra BatchNorm layer for the RoI head after conv5, i.e., Res5ROIHeadsExtraNorm layer in Detectron2
-3\frozen first two convolutional blocks of ResNet-50, i.e., conv1 and conv2 in Detectron2.
+     
+     
+3\frozen first two convolutional blocks of ResNet-50, i.e., conv1 and conv2 in Detectron2
+     
+     
 4\learning rate is first warmed-up for 100 steps to 0.02 and then reduced by a factor of 10 after 18K and 22K training steps
+     
+     
 5\we use in total 24K training steps for all the experiments, except when training class-agnostic detectors on the pseudo-boxes of the VOC07 trainval set, in which case we use 10K steps.
+     
 
-The training details and other results about SoLOST+CAD are in CAD and LOST_CAD.
+6\The training details and other results about SoLOST+CAD are in CAD and LOST_CAD.
